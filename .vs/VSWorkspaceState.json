@@ -2,7 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\cypress",
-    "\\node_modules"
+    "\\cypress\\integration"
   ],
+  "SelectedNode": "\\jsconfig.json",
   "PreviewInSolutionExplorer": false
 }
