@@ -1,0 +1,22 @@
+{
+    "correct_credential":{
+        "user": "standard_user",
+        "password": "secret_sauce"
+    },
+    "empty_username":{
+        "user": "",
+        "password": "secret_sauce"
+    },
+    "empty_password": {
+        "user": "standard_user",
+        "password": ""
+    },
+    "wrong_password":{
+        "user": "standard_user",
+        "password": "1111111"
+    },
+    "performance": {
+        "user": "performance_glitch_user",
+        "password": "secret_sauce"
+    }
+}

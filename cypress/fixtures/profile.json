@@ -1,0 +1,11 @@
+{
+    "Student1": {
+        "FirstName": "Peter",
+        "LastName": "Li",
+        "Email": "abcdef@gmail.com",
+        "Gender": "Male",
+        "Mobile": "1234567890",
+        "State": "Haryana",
+        "City": "Karnal"
+    }
+}
