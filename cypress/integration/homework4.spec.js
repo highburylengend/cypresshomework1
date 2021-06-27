@@ -17,12 +17,7 @@ describe("Verify logon function", () => {
     cy.get(".cart_item").its("length").should("eq", 5);
 
     cy.clearCart();
-    cy.get("button").contains("REMOVE").should("eq", 0);
-
-    //cy.get("#add-to-cart-sauce-labs-bike-light").click();
-    //cy.get("#add-to-cart-sauce-labs-fleece-jacket").click();
-    //cy.get(".shopping_cart_link").click();
-    //cy.get(".cart_item").its("length").should("eq", 2);
+    cy.get("button").contains("Remove").should("have.length", 0);
   });
 
   it("logon with incorrect username", () => {

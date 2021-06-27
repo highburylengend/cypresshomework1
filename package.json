@@ -12,5 +12,9 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^7.5.0"
+  },
+  "dependencies": {
+    "enquirer": "^2.3.6",
+    "util": "^0.12.4"
   }
 }

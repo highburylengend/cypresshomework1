@@ -18,8 +18,8 @@ describe("Registration Form", () => {
         }
       }
       cy.get("#userNumber").clear().type(regInfo.Student1.Mobile);
-      //cy.get("#State").clear().type(regInfo.Student1.State);
-      //cy.get(". css-1wa3eu0-placeholder").clear().type(regInfo.Student1.City);
+      //  cy.get(".css-1uccc91-singleValue").type(regInfo.Student1.State);
+      //  cy.get("#react-select-4-input").clear().type(regInfo.Student1.City);
       cy.get("#submit").click();
 
       cy.get("table")
