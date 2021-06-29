@@ -13,8 +13,9 @@ describe("Verify logon function", () => {
     cy.get("div").contains("Login").click();
     cy.get("div").should("have.class", "shopping_cart_container");
 
-    cy.addToCart(5);
-    cy.get(".cart_item").its("length").should("eq", 5);
+    cy.addToCart(3);
+    cy.get(".shopping_cart_link").click();
+    cy.get(".cart_item").its("length").should("eq", 3);
 
     cy.clearCart();
     cy.get("button").contains("Remove").should("have.length", 0);

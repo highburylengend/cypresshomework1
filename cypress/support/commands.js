@@ -40,48 +40,62 @@ Cypress.Commands.add("webLogin", (username, password) => {
 });
 
 Cypress.Commands.add("addToCart", (num) => {
-  cy.visit("https://www.saucedemo.com/");
   Cypress.log({
     name: "addToCart",
     number: num,
   });
 
-  cy.get("#user-name").type("standard_user");
-  cy.get("#password").type("secret_sauce");
-  cy.get("div").contains("Login").click();
-  switch (num.toString()) {
-    case "6":
-      cy.get("[data-test=add-to-cart-test.allthethings()-t-shirt-(red)]").click;
-    case "5":
-      cy.get("[data-test = add-to-cart-sauce-labs-bike-light]").click();
-    case "4":
-      cy.get("[data-test = add-to-cart-sauce-labs-bolt-t-shirt]").click();
-    case "3":
-      cy.get("[data-test = add-to-cart-sauce-labs-backpack]").click();
-    case "2":
-      cy.get("[data-test = add-to-cart-sauce-labs-onesie]").click();
-    case "1":
-      cy.get("[data-test = add-to-cart-sauce-labs-fleece-jacket]").click();
+  var items = new Array(num);
+
+  for (let i = 0; i < num; i++) {
+    if (i == 0) {
+      var random = Math.floor(Math.random() * 6) + 1;
+      items[i] = random;
+    } else {
+      var random = Math.floor(Math.random() * 6) + 1;
+      if (items.includes(random)) {
+        i--;
+        //break;
+      } else {
+        items[i] = random;
+      }
+    }
   }
-  cy.get(".shopping_cart_link").click();
+
+  for (let j = 0; j < num; j++) {
+    switch (items[j].toString()) {
+      case "6":
+        cy.get(
+          "[data-test='add-to-cart-test.allthethings()-t-shirt-(red)']"
+        ).click();
+        break;
+      case "5":
+        cy.get("[data-test = add-to-cart-sauce-labs-bike-light]").click();
+        break;
+      case "4":
+        cy.get("[data-test = add-to-cart-sauce-labs-bolt-t-shirt]").click();
+        break;
+      case "3":
+        cy.get("[data-test = add-to-cart-sauce-labs-backpack]").click();
+        break;
+      case "2":
+        cy.get("[data-test = add-to-cart-sauce-labs-onesie]").click();
+        break;
+      case "1":
+        cy.get("[data-test = add-to-cart-sauce-labs-fleece-jacket]").click();
+        break;
+    }
+  }
 });
 
 Cypress.Commands.add("clearCart", () => {
-  cy.visit("https://www.saucedemo.com/");
   Cypress.log({
     name: "clearCart",
   });
 
-  cy.get("#user-name").type("standard_user");
-  cy.get("#password").type("secret_sauce");
-  cy.get("div").contains("Login").click();
-  cy.get(".shopping_cart_link").click();
-
-  for (let i = 0; i < 5; i++) {
-    cy.get("button").contains("Remove").click();
-  }
-
-  // for (let i = 0; i < cy.get(".cart_item").its("length"); i++) {
-  //   cy.get("button").contains("Remove").click();
-  // }
+  cy.get(".cart_item").then(($ci) => {
+    for (let i = 0; i < $ci.length; i++) {
+      cy.get("button").contains("Remove").click();
+    }
+  });
 });
