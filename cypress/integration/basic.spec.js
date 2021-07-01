@@ -69,11 +69,23 @@ describe("Browser Action", () => {
     cy.get("input#tree-node-documents").click({ force: true });
   });
 
-  it.only("chained assertion", () => {
+  it("chained assertion", () => {
     cy.visit("zero.webappsecurity.com/login.html");
     cy.contains("Sign in").click();
     cy.get(".alert-error")
       .should("be.visible")
       .and("contain", "Login and/or password are wrong");
+  });
+
+  it.only("scrolling on the page", () => {
+    cy.visit("http://github.com/cypress-io/cypress");
+    cy.scrollTo("bottom");
+    cy.wait(2000);
+    cy.scrollTo("top");
+    cy.wait(2000);
+    cy.scrollTo(0, 2000);
+    cy.wait(2000);
+    cy.contains("Please see our").scrollIntoView();
+    cy.wait(2000);
   });
 });

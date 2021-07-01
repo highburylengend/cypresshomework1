@@ -1,0 +1,10 @@
+testing result for round 0 is 68.44843453371159
+testing result for round 1 is 42.95517503583959
+testing result for round 2 is 35.5343174296447
+testing result for round 3 is 16.662420223138152
+testing result for round 4 is 27.449300423395506
+testing result for round 5 is 57.518041127694474
+testing result for round 6 is 2.5507906448045903
+testing result for round 7 is 17.92853737083955
+testing result for round 8 is 75.12870930191207
+testing result for round 9 is 18.814955540275903

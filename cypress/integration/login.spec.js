@@ -4,12 +4,16 @@ describe("using fixture in login testing", () => {
     cy.fixture("login.json").then((loginInfo) => {
       cy.log(JSON.stringify(loginInfo));
       //login with valid username and password
-      cy.get("#user-name").clear().type(loginInfo.performance.user);
+      cy.xpath('//*[@id="user-name"]').clear().type(loginInfo.performance.user);
+      //cy.get("#user-name").clear().type(loginInfo.performance.user);
 
       //use keyboard character
-      cy.get("#password")
+      cy.xpath('//*[@id="password"]')
         .clear()
         .type(loginInfo.performance.password + "{enter}");
+      // cy.get("#password")
+      //   .clear()
+      //   .type(loginInfo.performance.password + "{enter}");
 
       //Use login button
       //cy.get("#password").clear().type(loginInfo.performance.password);

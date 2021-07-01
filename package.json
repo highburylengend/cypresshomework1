@@ -11,9 +11,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^7.5.0"
+    "cypress": "^7.5.0",
+    "popper.js": "^1.16.1"
   },
   "dependencies": {
+    "cypress-xpath": "^1.6.2",
     "enquirer": "^2.3.6",
     "util": "^0.12.4"
   }
