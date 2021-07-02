@@ -1,5 +1,5 @@
 describe("logged in user", () => {
-  content("test suite 1", () => {
+  context("test suite 1", () => {
     it("tests11", () => {
       cy.log("!!!!!!Test 1 !!!!!!");
     });
@@ -17,7 +17,7 @@ describe("logged in user", () => {
     });
   });
 
-  content("test suite 2", () => {
+  context("test suite 2", () => {
     it("tests21", () => {
       cy.log("!!!!!!Test 1 !!!!!!");
     });
