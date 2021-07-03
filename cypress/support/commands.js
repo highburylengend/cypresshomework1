@@ -118,6 +118,6 @@ Cypress.Commands.add("clearCart", () => {
 
   //Another way with each()
   cy.get(".cart_item").each((cartitem) => {
-    cy.get(cartitem).contains("Remove").click();
+    cy.get(cartitem).contains("Remove").last.click();
   });
 });
