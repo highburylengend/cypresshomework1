@@ -6,5 +6,7 @@
     "env":{
 
     },
-    "integrationFolder": "cypress/integration"
+    "integrationFolder": "cypress/integration",
+    "viewportWidth" : 1200,
+    "viewportHeight": 1200
 }

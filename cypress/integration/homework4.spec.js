@@ -14,7 +14,7 @@ describe("hook test", () => {
 
   afterEach(() => {
     //cy.wait(2000);
-    cy.get("td").contains("Destroy").click();
+    cy.get("td").contains("Destroy").last.click();
   });
 
   after(() => {
