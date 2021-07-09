@@ -54,6 +54,8 @@ export class ProdListPage {
 
   goToCart() {
     cy.get(".shopping_cart_link").click();
+    //cy.get("div").should("include", "Your Cart");
+    cy.contains("Your Cart");
   }
 }
 

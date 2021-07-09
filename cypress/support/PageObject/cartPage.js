@@ -11,10 +11,13 @@ export class CartPage {
 
   continueShopping() {
     cy.get("[data-test=continue-shopping]").click();
+    cy.get("div").should("have.class", "shopping_cart_container");
   }
 
   checkout() {
     cy.get("[data-test=checkout]").click();
+    //cy.get("div").should("include", "Checkout: Your Information");
+    cy.contains("Checkout: Your Information");
   }
 
   validateItems(num) {
