@@ -1,0 +1,47 @@
+{
+    "articles":[
+        {
+            "title":"A1",
+            "body":"aaa",
+            "tagList":[],
+            "description": "a11",
+            "author":{
+                "username":"Test002",
+                "bio": null,
+                "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+                "following": false
+            },
+            "favorited": false,
+            "favoritesCount": 0  
+        },
+        {
+            "title":"A2",
+            "body":"bbb",
+            "tagList":[],
+            "description": "b22",
+            "author":{
+                "username":"Test002",
+                "bio": null,
+                "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+                "following": false
+            },
+            "favorited": false,
+            "favoritesCount": 0  
+        },
+        {
+            "title":"A3",
+            "body":"ccc",
+            "tagList":[],
+            "description": "c33",
+            "author":{
+                "username":"Test002",
+                "bio": null,
+                "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+                "following": false
+            },
+            "favorited": false,
+            "favoritesCount": 0  
+        }
+    ],
+    "articlesCount": 3
+}
