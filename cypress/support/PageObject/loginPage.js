@@ -1,9 +1,8 @@
 /// <reference types = "cypress"/>
 
+const USER_NAME = "standard_user";
+const PASSWORD = "secret_sauce";
 export class LoginPage {
-  //const USER_NAME = "standard_user";
-  //static PASSWORD = "secret_sauce";
-
   visit() {
     cy.visit("https://www.saucedemo.com/");
   }

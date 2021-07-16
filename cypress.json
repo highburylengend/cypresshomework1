@@ -9,4 +9,5 @@
     "integrationFolder": "cypress/integration",
     "viewportWidth" : 1200,
     "viewportHeight": 1200
+  
 }
