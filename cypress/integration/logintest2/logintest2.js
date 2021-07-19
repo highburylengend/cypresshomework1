@@ -17,7 +17,7 @@ Then("I should login successfully", () => {
   cy.get("body", { timeout: 10 }).should("contain", "Products");
 });
 
-When("When I input the {string} and {string}", (username, password) => {
+When("I input the {string} and {string}", (username, password) => {
   cy.get('input[data-test="username"]').clear().type(username);
   cy.get('input[data-test="password"]').clear().type(password);
 });

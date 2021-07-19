@@ -3,13 +3,13 @@ Feature: login
     Scenario: login with the correct credential
         Given I am on the login page
         When I input the correct username and password
-        And I click on the signin button
+        When I click on the signin button
         Then I should login successfully
 
     Scenario Outline: login with the incorrect credential
         Given I am on the login page
         When I input the '<username>' and '<password>'
-        And I click on the signin button
+        When I click on the signin button
         Then I should get '<errorMessage>' message
         Examples:
             | username        | password     | errorMessage                          |
